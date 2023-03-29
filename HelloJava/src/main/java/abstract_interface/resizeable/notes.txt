@@ -1,0 +1,15 @@
+Định nghĩa 1 đối tượng trung gian để so sánh 2 thằng hinh học
+
+public class ComparatorGeometricByArea implements Comparator<Geometric> {
+    @Override
+    public int compare(Geometric o1, Geometric o2) {
+        if (o1.getArea() > o2.getArea()) {
+            return 1;           // trả về 1 số lớn hơn 0 (=1) thì o1>o2
+        } else if (o1.getArea() == o2.getArea()) {
+            return 0;           // trả về 0 thì o1=o2
+        }else
+            return -1;
+    }
+}
+
+

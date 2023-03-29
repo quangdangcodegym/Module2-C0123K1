@@ -1,0 +1,114 @@
+10/03/23
+Khai báo mảng: 
+	int [] numbers = new int[5];		// khởi tạo 1 mảng gồm 5 phần tử với giá trị mặt định là 0
+	int[] numbers = {1, 7, 5, 1}; 		// khai báo nhanh 1 mảng
+	Độ dài mảng, numbers[i]
+Truyền tham trị và tham chiếu
+Các kiểu dữ liệu mặc định
+
+Bài tập 
+BT1: Tính tổng các giá trị trong mảng
+BT2: Đếm xem mảng có bao nhiêu số chẵn
+BT3: Tìm giá trị nhỏ nhất của mảng
+BT4: Thêm phần tử vào mảng
+BT5: Xóa phần tử khỏi mảng
+BT6: Gộp 2 mảng a, b lại với nhau
+Bài tập vòng lặp ai chưa làm thì làm bù
+
+Đọc bài trước, note lại và demo:
+Lớp Wrapper trong java
+https://viettuts.vn/java/lop-wrapper-trong-java
+
+Kiểu tham chiếu và tham trị trong Java
+https://gochocit.com/ngon-ngu-lap-trinh/truyen-tham-tri-va-tham-chieu-cho-phuong-thuc-trong-java
+
+
+13/03
+// Scanner dùng để nhập thông tin
+public static Scanner scanner = new Scanner(System.in);
+
+// In có xuống dòng
+System.out.println();
+
+// Lớp Arrays có phương thức toString dùng để chuyển 1 mảng thành chuỗi
+Arrays.toString(a)
+
+// In có format
+System.out.printf("%s xin chao", "C1222I1");
+
+//Sao chép 1 mảng gốc thành 1 mảng mới theo 1 độ dài cho trước
+Arrays.copyOf(a, a.length + 1);
+
+/---------------------------------------------------------14/03
+Các bộ định dạng có sẵn trong Printf:
+
+. %c: Ký tự
+vd:
+char letter = 'A';
+System.out.printf("The letter is %c", letter);//The letter is A
+
+. %d: Số thập phân (số nguyên) (cơ số 10)
+vd:
+int age = 27;
+System.out.printf("I am %d years old", age);//I am 27 years old
+
+. %e: Dấu phẩy động theo cấp số nhân
+vd:
+double pi = 3.14159265359;
+System.out.printf("The value of pi is approximately %e", pi);//The value of pi is approximately 3.141593e+00
+
+. %f: Dấu phẩy động
+. %i: Số nguyên (cơ sở 10)
+. %o: Số bát phân (cơ sở 8)
+. %s: Chuỗi
+. %u: Số thập phân (số nguyên) không dấu
+. %x: Số trong hệ thập lục phân (cơ sở 16)
+. %t: Định dạng ngày / giờ
+. %%: Dấu phần trăm
+. \%: Dấu phần trăm
+ int age = 30;
+double weight = 65.5667;
+System.out.printf("Age: %d, Weight: %.3f \n", age, weight);
+
+System.out.printf("%s | %10s | %20s \n", "ID", "Name", "Price");
+System.out.printf("%s | %10s | %20s \n", "ID", "Quang Dang", "1000000000");
+System.out.printf("%s | %10s | %-20s \n", "ID", "Quang Dang", "1000000000");
+
+Đọc thêm và notes:
+Print format trong java
+https://niithanoi.edu.vn/printf-trong-java.html
+
+Xem trước: OOP
+https://www.youtube.com/watch?v=tcGNKqhu3GE
++ Từ khóa class, từ khóa new
++ thuộc tính, phương thức là gì
++ phương thức khởi tạo
+Làm demo luôn
+
+/---------------------------------------------------------15/03
+Đọc tìm hiểu và demo
+
++ access modifier trong Java
+https://www.youtube.com/watch?v=CnfZ20xqBLE
+
++ biến static trong java
+https://www.youtube.com/watch?v=YTYnNFCcDXA
+
++ Nested class là gì?
++ biến instance và biến local, biến static  trong java
+https://viettuts.vn/java/bien-trong-java
+
+
+// Soạn và notes bài ngày 17/03
+@channel
+Về notes lại 2 bài : Cylinder và bài Point
+Về soạn và demo theo video youtube
++ Vì sao trong Java không cho đa kế thừa
++ Lớp abstract là gì, phương thức abstract là gì. Khi nào sử dụng lớp abstract
++ Các tính chất của lớp abstract
++ Interface là gì
++ Các tính chất của interface
++ Khi nào dùng abstrac khi nào dùng interface
+https://www.youtube.com/watch?v=Opjbc-q8zNQ
+https://www.youtube.com/watch?v=pOvV9IIf0TQ
+
