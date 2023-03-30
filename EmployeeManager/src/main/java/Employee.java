@@ -79,4 +79,19 @@ public class Employee {
     public void setEmployeeType(EmployeeType employeeType) {
         this.employeeType = employeeType;
     }
+
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", birthDay=" + birthDay +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", employeeType=" + employeeType +
+                ", certificates=" + certificates +
+                '}';
+    }
+
 }

@@ -7,6 +7,10 @@ public class Experience extends Employee{
 
     }
 
+    //id, fullName, date, phone, email,EmployeeType.Fresher
+    public Experience(long id, String fullName, Date date, String phone, String email, EmployeeType type) {
+        super(id, fullName, date, phone, email, type);
+    }
     public Experience(int expInYear, String proSkill) {
         ExpInYear = expInYear;
         ProSkill = proSkill;
@@ -32,5 +36,14 @@ public class Experience extends Employee{
 
     public void setProSkill(String proSkill) {
         ProSkill = proSkill;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Experience{" +
+                "ExpInYear=" + ExpInYear +
+                ", ProSkill='" + ProSkill + '\'' +
+                '}';
     }
 }
