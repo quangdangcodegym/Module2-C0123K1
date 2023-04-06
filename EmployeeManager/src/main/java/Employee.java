@@ -8,6 +8,7 @@ public class Employee {
     private String phone;
     private String email;
 
+
     private EmployeeType employeeType;
 
     List<Certificate> certificates;
@@ -83,15 +84,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", fullName='" + fullName + '\'' +
-                ", birthDay=" + birthDay +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", employeeType=" + employeeType +
-                ", certificates=" + certificates +
-                '}';
+        return String.format("%5s | %10s | %30s | %20s | %30s | %10s \n",
+                this.getId(), this.getFullName(), this.getBirthDay(),this.getPhone(),
+                this.getEmail(), this.getEmployeeType());
+
     }
 
 }

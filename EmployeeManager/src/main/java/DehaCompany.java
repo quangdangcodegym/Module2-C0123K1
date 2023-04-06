@@ -11,6 +11,8 @@ public class DehaCompany {
         employees = new ArrayList<>();
         //long id, String fullName, Date birthDay, String phone, String email,
         // EmployeeType employeeType, int expInYear, String proSkill
+
+        // Polymorphism is the ability of an object to take on many forms
         Employee ep1 = new Experience(1L, "Quang Dang", new Date(1992, 7, 18), "033399457133",
                 "quang.dang@codegym.vn", EmployeeType.Experience, 5, "Chem gio");
         // String majors, int semester, String universityName)
@@ -30,8 +32,8 @@ public class DehaCompany {
                 "ID", "Name", "Birthday","Phone","Email", "Employee Type");
         for (int i = 0; i < employees.size(); i++) {
             Employee e = employees.get(i);
-            System.out.printf("%5s | %10s | %30s | %20s | %30s | %10s \n",
-                    e.getId(), e.getFullName(), e.getBirthDay(),e.getPhone(),e.getEmail(), e.getEmployeeType());
+            System.out.println(e.toString());
+
         }
     }
     

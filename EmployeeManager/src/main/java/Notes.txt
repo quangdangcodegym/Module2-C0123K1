@@ -1,0 +1,18 @@
+public enum EmployeeType {
+    Experience(0), Fresher(1), Intern(2);
+    private int id;
+    private EmployeeType(int id) {
+        this.id = id;
+    }
+}
+
+//-------------------------------
+List<Employee> employees;       // có thể chưa 3 loại: intern, fresher, experience
+
+
+// addEmployee
+
+// updateEmployee
+employees.set(i, employee);
+
+
