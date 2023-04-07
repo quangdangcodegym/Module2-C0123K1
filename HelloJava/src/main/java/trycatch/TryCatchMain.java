@@ -23,10 +23,10 @@ public class TryCatchMain {
 //
 //        System.out.println(c[10]);
 
-//        PrintWriter printWriter = new PrintWriter("data.txt");
+//        PrintWriter printWriter = new PrintWriter("scores.txt");
 
 //        try {
-//            PrintWriter printWriter = new PrintWriter("data.txt");
+//            PrintWriter printWriter = new PrintWriter("scores.txt");
 //
 //        } catch (FileNotFoundException fileNotFoundException) {
 //
@@ -63,7 +63,7 @@ public class TryCatchMain {
 
 
     public static int testThrow() throws FileNotFoundException  {
-        PrintWriter printWriter = new PrintWriter("data.txt");      // throw FileNotFoundException()
+        PrintWriter printWriter = new PrintWriter("scores.txt");      // throw FileNotFoundException()
         return -1;
     }
 }
