@@ -1,4 +1,6 @@
-package com.codegym;
+package com.codegym.comparator;
+
+import com.codegym.model.Book;
 
 import java.util.Comparator;
 

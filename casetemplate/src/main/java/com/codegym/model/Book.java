@@ -1,4 +1,6 @@
-package com.codegym;
+package com.codegym.model;
+
+import com.codegym.utils.DateUtils;
 
 import java.util.Date;
 
@@ -63,5 +65,12 @@ public class Book {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        //1,Chí Phèo,Ghi lại quá trình Chí Phèo tán thị Nở,10-04-2023 14:16:30,10000
+        return String.format("%s,%s,%s,%s,%s", this.id, this.name, this.description,
+                DateUtils.formatDate(this.entryDate), this.price);
     }
 }
