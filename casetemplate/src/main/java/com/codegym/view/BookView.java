@@ -7,6 +7,7 @@ import com.codegym.model.Book;
 import com.codegym.service.BookServiceInFile;
 import com.codegym.service.BookServiceInmemory;
 import com.codegym.service.IBookService;
+import com.codegym.utils.ValidateUtils;
 
 import java.util.*;
 
@@ -39,15 +40,63 @@ public class BookView {
         }
     }
 
-    public void addBook(){
-        System.out.println("Nhập thông tin sách:");
-        System.out.println("Nhập tên sách:");
-        String name = scanner.nextLine();
-        System.out.println("Nhập mo tả: ");
-        String description = scanner.nextLine();
+    public void inputBookName(Book book) {
+        String name;
+        boolean checkValid = false;
+        do {
+            System.out.println("Nhập tên sách:");
+            name = scanner.nextLine();
 
-        System.out.println("Nhập giá");
-        double price = Double.parseDouble(scanner.nextLine());
+            checkValid = ValidateUtils.isValidBookName(name);
+            if (checkValid == false) {
+                System.out.println("Tên không hợp lệ, vui lòng nhập lại. Tên phải từ 8-20 kí tự và bắt đầu bằng chữ cái");
+            }
+        } while (!checkValid);
+        book.setName(name);
+    }
+
+    public void inputBookDescription(Book book) {
+        String description;
+        boolean checkValid = false;
+        do {
+            System.out.println("Nhập mo tả: ");
+            description = scanner.nextLine();
+            checkValid = ValidateUtils.isValidBooDescription(description);
+            if (!checkValid) {
+                System.out.println("Mô tả không hợp lệ, vui lòng nhập lại. Mô tả phải từ 8-100 kí tự và bắt đầu bằng chữ cái");
+            }
+        } while (!checkValid);
+
+        book.setDescription(description);
+    }
+
+    public void inputBookPrice(Book book) {
+        double price = 0;
+        boolean checkValid = false;
+        do {
+            System.out.println("Nhập giá");
+            try {
+                price = Double.parseDouble(scanner.nextLine());
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println("Giá không hợp lệ vui lòng nhập lại! Giá từ 0-5.000.000đ");
+                price = 0;
+                continue;
+            }
+            checkValid = ValidateUtils.isValidPrice(price);     // false
+            if (checkValid==false) {
+                System.out.println("Giá không hợp lệ vui lòng nhập lại! Giá từ 0-5.000.000đ");
+            }
+        } while (checkValid==false);
+
+        book.setPrice(price);
+    }
+    public void addBook(){
+        Book book = new Book();
+        System.out.println("Nhập thông tin sách:");
+
+        inputBookName(book);
+        inputBookDescription(book);
+        inputBookPrice(book);
 
         Comparator comparator = new ComparatorById();
 
@@ -55,17 +104,11 @@ public class BookView {
         books.sort(comparator);
         long maxId = books.get(books.size()-1).getId();
 
-        Book book = new Book();
         book.setId(maxId + 1);
-        book.setName(name);
-        book.setDescription(description);
-        book.setPrice(price);
         book.setEntryDate(new Date());
 
         books.add(book);
-
         showBooks();
-
 
     }
 

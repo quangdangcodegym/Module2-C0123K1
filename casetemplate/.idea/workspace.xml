@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="704b229c-9f55-43bc-9e26-ed957c6d8a64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../HelloJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJava/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloJava/country.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJava/country.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloJava/target/classes/read_write_file/CountryMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJava/target/classes/read_write_file/CountryMain.class" afterDir="false" />
-    </list>
+    <list default="true" id="704b229c-9f55-43bc-9e26-ed957c6d8a64" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,14 +30,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BookStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.BookStore" />
@@ -73,6 +69,7 @@
       <workItem from="1680767160206" duration="658000" />
       <workItem from="1680792379814" duration="30000" />
       <workItem from="1681108473487" duration="7911000" />
+      <workItem from="1681176951091" duration="5809000" />
     </task>
     <servers />
   </component>

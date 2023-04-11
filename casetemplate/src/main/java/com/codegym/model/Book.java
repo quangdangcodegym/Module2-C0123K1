@@ -73,4 +73,6 @@ public class Book {
         return String.format("%s,%s,%s,%s,%s", this.id, this.name, this.description,
                 DateUtils.formatDate(this.entryDate), this.price);
     }
+
+
 }
