@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="704b229c-9f55-43bc-9e26-ed957c6d8a64" name="Changes" comment="" />
+    <list default="true" id="704b229c-9f55-43bc-9e26-ed957c6d8a64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../HelloJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJava/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +17,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -38,6 +41,11 @@
     &quot;last_opened_file_path&quot;: &quot;D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CODEGYM\CODEGYM\Module2\C0123K1\casetemplate\src\main\java\com\codegym\service\inmemory" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="BookStore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codegym.BookStore" />
@@ -69,7 +77,11 @@
       <workItem from="1680767160206" duration="658000" />
       <workItem from="1680792379814" duration="30000" />
       <workItem from="1681108473487" duration="7911000" />
-      <workItem from="1681176951091" duration="5809000" />
+      <workItem from="1681176951091" duration="7615000" />
+      <workItem from="1681195528476" duration="42000" />
+      <workItem from="1681268296254" duration="333000" />
+      <workItem from="1681281928410" duration="7282000" />
+      <workItem from="1681304069980" duration="5802000" />
     </task>
     <servers />
   </component>

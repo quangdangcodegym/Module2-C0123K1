@@ -4,8 +4,7 @@ import com.codegym.comparator.ComparatorById;
 import com.codegym.comparator.ComparatorByName;
 import com.codegym.comparator.ComparatorByPrice;
 import com.codegym.model.Book;
-import com.codegym.service.BookServiceInFile;
-import com.codegym.service.BookServiceInmemory;
+import com.codegym.service.file.BookServiceWithFile;
 import com.codegym.service.IBookService;
 import com.codegym.utils.ValidateUtils;
 
@@ -18,7 +17,7 @@ public class BookView {
     private Scanner scanner = new Scanner(System.in);
     public BookView() {
         // Ở đây áp dụng tính chất gì:
-        bookService = new BookServiceInFile();
+        bookService = new BookServiceWithFile();
     }
     public void showBooks(){
         System.out.printf("%5s | %30s | %20s | %30s | %10s \n", "ID", "Name", "Description", "Date", "Price");
@@ -141,7 +140,6 @@ public class BookView {
 
     public void launcher() {
         Scanner scan = new Scanner(System.in);
-        BookView bookStore = new BookView();
         boolean checkActionMenu = true;
         do {
             System.out.println("Menu quản lý sách: ");
@@ -156,25 +154,25 @@ public class BookView {
             int actionMenu = Integer.parseInt(scan.nextLine());
             switch (actionMenu) {
                 case 1:
-                    bookStore.showBooks();
+                    showBooks();
                     break;
                 case 2:
-                    bookStore.addBook();
+                    addBook();
                     break;
                 case 3:
-                    bookStore.editBook();
+                    editBook();
                     break;
                 case 4:
-                    bookStore.deleteBook();
+                    deleteBook();
                     break;
                 case 5:
-                    bookStore.sortByPrice();
+                    sortByPrice();
                     break;
                 case 6:
-                    bookStore.sortByName();
+                    sortByName();
                     break;
                 case 7:
-                    bookStore.searchByName();
+                    searchByName();
                     break;
                 default:
                     System.out.println("Nhập sai rồi bạn ơi! Vui lòng nhập lại");

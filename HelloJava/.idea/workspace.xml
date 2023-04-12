@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a1e1544-a565-407d-9410-fa39f9f60421" name="Changes" comment="" />
+    <list default="true" id="9a1e1544-a565-407d-9410-fa39f9f60421" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../casetemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../casetemplate/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,21 +31,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="CountryMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="read_write_file.CountryMain" />
+}</component>
+  <component name="RunManager" selected="Application.SortMain">
+    <configuration name="SortMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort.SortMain" />
       <module name="HelloJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="read_write_file.*" />
+          <option name="PATTERN" value="sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -51,12 +53,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="read_write_file.FileEx" />
+    <configuration name="SychronizationMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.synchronization.SychronizationMain" />
       <module name="HelloJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="read_write_file.*" />
+          <option name="PATTERN" value="thread.synchronization.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -64,25 +66,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadWriteBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="read_write_binary.ReadWriteBinary" />
+    <configuration name="SychronizationMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.synchronization.SychronizationMain" />
       <module name="HelloJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="read_write_binary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ScannerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="myscanner.ScannerTest" />
-      <module name="HelloJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myscanner.*" />
+          <option name="PATTERN" value="thread.synchronization.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,13 +86,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.basic.ThreadMain" />
+      <module name="HelloJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortMain" />
+        <item itemvalue="Application.SychronizationMain" />
+        <item itemvalue="Application.SychronizationMain (1)" />
+        <item itemvalue="Application.ThreadMain" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.ReadWriteBinary" />
-        <item itemvalue="Application.CountryMain" />
-        <item itemvalue="Application.FileEx" />
-        <item itemvalue="Application.ScannerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -122,6 +124,8 @@
       <workItem from="1680849576623" duration="5084000" />
       <workItem from="1680918154438" duration="2797000" />
       <workItem from="1681090871546" duration="1946000" />
+      <workItem from="1681268632982" duration="5173000" />
+      <workItem from="1681281705092" duration="219000" />
     </task>
     <servers />
   </component>

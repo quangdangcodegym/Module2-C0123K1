@@ -2,6 +2,8 @@ package com.codegym.utils;
 
 import com.codegym.model.Book;
 import com.codegym.model.Customer;
+import com.codegym.model.Order;
+import com.codegym.model.OrderItem;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,10 +13,13 @@ import java.util.List;
 public class FileUtils {
     public static final int CLASS_BOOK = 1;
     public static final int CLASS_CUSTOMER = 2;
+    public static final int CLASS_ORDER = 3;
+
+    public static final int CLASS_ORDER_ITEM = 4;
     public static  <T> List<T> readDataFromFile(String fileName, int classID){
         List<T> datas = new ArrayList<>();
         try {
-            FileReader fileReader = new FileReader("./data/book.csv");
+            FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             String line = "";
@@ -58,6 +63,34 @@ public class FileUtils {
                         datas.add((T) customer);
                         break;
                     }
+                    case CLASS_ORDER:
+                    {
+                        // line: 1,Quang Dang,10-04-2023 14:16:30,25000
+                        String[] items = line.split(",");
+                        Order order = new Order();
+                        order.setId(Long.parseLong(items[0]));
+                        order.setFullName(items[1]);
+                        order.setCreateAt(DateUtils.parseDate(items[2]));
+                        order.setTotal(Double.parseDouble(items[3]));
+
+                        datas.add((T) order);
+                        break;
+                    }
+                    case CLASS_ORDER_ITEM:
+                    {
+                        // line: 1,1,1,1,5000
+                        String[] items = line.split(",");
+                        OrderItem orderItem = new OrderItem();
+                        orderItem.setId(Long.parseLong(items[0]));
+                        orderItem.setIdOrder(Long.parseLong(items[1]));
+                        orderItem.setIdBook(Long.parseLong(items[2]));
+                        orderItem.setQuantity(Integer.parseInt(items[3]));
+                        orderItem.setPrice(Double.parseDouble(items[4]));
+
+                        datas.add((T) orderItem);
+                        break;
+                    }
+
 
                 }
 

@@ -1,20 +1,12 @@
-package com.codegym.service;
+package com.codegym.service.file;
 
 import com.codegym.model.Book;
-import com.codegym.utils.DateUtils;
+import com.codegym.service.IBookService;
 import com.codegym.utils.FileUtils;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class BookServiceInFile implements IBookService{
+public class BookServiceWithFile implements IBookService {
     public final String pathBook = "./data/book.csv";
     @Override
     public List<Book> getAll(){
@@ -22,6 +14,19 @@ public class BookServiceInFile implements IBookService{
         return books;
 
     }
+
+    @Override
+    public Book findBookById(long idBook) {
+        List<Book> books = getAll();
+
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getId() == idBook) {
+                return books.get(i);
+            }
+        }
+        return null;
+    }
+
     @Override
     public void updateBookById(long id, Book book){
         List<Book> books = getAll();

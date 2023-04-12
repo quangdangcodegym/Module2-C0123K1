@@ -1,19 +1,12 @@
-package com.codegym.service;
+package com.codegym.service.file;
 
-import com.codegym.model.Book;
 import com.codegym.model.Customer;
-import com.codegym.utils.DateUtils;
+import com.codegym.service.ICustomerService;
 import com.codegym.utils.FileUtils;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class CustomerServiceInFile {
+public class CustomerServiceWithFile implements ICustomerService {
     public List<Customer> getAll(){
 
         List<Customer> customers = FileUtils.readDataFromFile("./data/customer.csv", FileUtils.CLASS_CUSTOMER);
@@ -22,6 +15,8 @@ public class CustomerServiceInFile {
     }
 
     public void updateCustomerById(long id, Customer customer) {
+
+
     }
     public void deleteCustomerById(long id) {
 
