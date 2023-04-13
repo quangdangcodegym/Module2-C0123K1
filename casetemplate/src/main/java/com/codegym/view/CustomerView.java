@@ -1,26 +1,35 @@
 package com.codegym.view;
 
+import com.codegym.BookStore;
 import com.codegym.service.ICustomerService;
+import com.codegym.service.file.BookServiceWithFile;
 import com.codegym.service.file.CustomerServiceWithFile;
 
 import java.util.Scanner;
 
 public class CustomerView {
     private ICustomerService customerService;
+    private BookStore bookStore;
 
     public CustomerView() {
+
+    }
+    public CustomerView(BookStore bookStore) {
+        init();
+        this.bookStore = bookStore;
+    }
+    public void init() {
         customerService = new CustomerServiceWithFile();
     }
     public void launcher() {
         Scanner scan = new Scanner(System.in);
-        BookView bookStore = new BookView();
         boolean checkActionMenu = true;
         do {
             System.out.println("Menu quản lý nhân viên: ");
-            System.out.println("Nhấn 1. Xem danh sách");
-            System.out.println("Nhấn 2. Thêm sách");
-            System.out.println("Nhấn 3. Sửa sách");
-            System.out.println("Nhấn 4. Xóa sách");
+            System.out.println("Nhấn 1. Xem danh sách nhân viên");
+            System.out.println("Nhấn 2. Thêm nhân viên");
+            System.out.println("Nhấn 3. Sửa nhân viên");
+            System.out.println("Nhấn 4. Xóa nhân viên");
             System.out.println("Nhấn 5. Sắp xếp sách theo giá ");
             System.out.println("Nhấn 6. Sắp xếp sách theo tên ");
             System.out.println("Nhấn 7. Tìm kiếm sách theo tên");

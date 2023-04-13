@@ -1,9 +1,6 @@
 package com.codegym.utils;
 
-import com.codegym.model.Book;
-import com.codegym.model.Customer;
-import com.codegym.model.Order;
-import com.codegym.model.OrderItem;
+import com.codegym.model.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,6 +11,7 @@ public class FileUtils {
     public static final int CLASS_BOOK = 1;
     public static final int CLASS_CUSTOMER = 2;
     public static final int CLASS_ORDER = 3;
+    public static final int CLASS_USER = 5;
 
     public static final int CLASS_ORDER_ITEM = 4;
     public static  <T> List<T> readDataFromFile(String fileName, int classID){
@@ -88,6 +86,20 @@ public class FileUtils {
                         orderItem.setPrice(Double.parseDouble(items[4]));
 
                         datas.add((T) orderItem);
+                        break;
+                    }
+                    case CLASS_USER:
+                    {
+                        String[] items = line.split(",");
+                        User user = new User();
+                        //1681307123,quangdang,123456,ADMIN,-1
+                        user.setId(Long.parseLong(items[0]));
+                        user.setUsername(items[1]);
+                        user.setPassword(items[2]);
+                        user.setRole(ERole.getERole(items[3]));
+                        user.setIdCustomer(Long.parseLong(items[4]));
+
+                        datas.add((T) user);
                         break;
                     }
 

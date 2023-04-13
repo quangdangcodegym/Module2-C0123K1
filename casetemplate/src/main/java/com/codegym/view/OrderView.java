@@ -1,5 +1,6 @@
 package com.codegym.view;
 
+import com.codegym.BookStore;
 import com.codegym.model.Book;
 import com.codegym.model.Order;
 import com.codegym.model.OrderItem;
@@ -18,52 +19,125 @@ public class OrderView {
     private IOrderService iOrderService;
     private IBookService iBookService;
     private Scanner scanner = new Scanner(System.in);
+    private BookStore bookStore;
 
+    public OrderView(BookStore bookStore) {
+        this.bookStore = bookStore;
+        init();
+    }
     public OrderView() {
 
+
+    }
+    public void init() {
         iOrderService = new OrderServiceWithFile();
         iBookService = new BookServiceWithFile();
     }
     public void launcher() {
-            Scanner scan = new Scanner(System.in);
-            boolean checkActionMenu = true;
+        switch (bookStore.getUser().getRole()) {
+            case ADMIN:
+                showMenuOrderAdmin();
+                break;
+            case USER:
+                showMenuOrderUser();
+                break;
+            case GUEST:
+                showMenuOrderUser();
+                break;
+        }
+    }
+
+    private void showMenuOrderAdmin() {
+        boolean checkActionMenu = true;
+        do {
+            System.out.println("Menu quản lý order: ");
+            System.out.println("Nhấn 1. Xem danh sách order");
+            System.out.println("Nhấn 2. Xem chi tiết order");
+            System.out.println("Nhấn 3. Tạo order");
+            System.out.println("Nhấn 4. Xóa order");
+            System.out.println("Nhấn 5: Xem tổng doanh thu");
+            int actionMenu = Integer.parseInt(scanner.nextLine());
+            switch (actionMenu) {
+                case 2:
+                    showOrderDetailView();
+                    break;
+                case 3:
+                    createOrder();
+                    break;
+                case 5:
+                    showReportTotalRevenue();
+                    break;
+                default:
+                    System.out.println("Nhập sai rồi bạn ơi! Vui lòng nhập lại");
+            }
+            boolean checkActionMenuContinue = true;
             do {
-                System.out.println("Menu quản lý order: ");
-                System.out.println("Nhấn 1. Xem danh sách order");
-                System.out.println("Nhấn 2. Xem chi tiết order");
-                System.out.println("Nhấn 3. Tạo order");
-                System.out.println("Nhấn 4. Xóa order");
-                int actionMenu = Integer.parseInt(scan.nextLine());
-                switch (actionMenu) {
-                    case 2:
-                        showOrderDetailView();
+                System.out.println("Bạn có muốn tiếp tục hay không: Y/N");
+                String actionMenuContinue = scanner.nextLine();
+                switch (actionMenuContinue) {
+                    case "Y":
+                        checkActionMenu = true;
+                        checkActionMenuContinue = false;
                         break;
-                    case 3:
-                        createOrder();
+                    case "N":
+                        checkActionMenu = false;
+                        checkActionMenuContinue = false;
                         break;
                     default:
-                        System.out.println("Nhập sai rồi bạn ơi! Vui lòng nhập lại");
+                        checkActionMenuContinue = true;
                 }
-                boolean checkActionMenuContinue = true;
-                do {
-                    System.out.println("Bạn có muốn tiếp tục hay không: Y/N");
-                    String actionMenuContinue = scan.nextLine();
-                    switch (actionMenuContinue) {
-                        case "Y":
-                            checkActionMenu = true;
-                            checkActionMenuContinue = false;
-                            break;
-                        case "N":
-                            checkActionMenu = false;
-                            checkActionMenuContinue = false;
-                            break;
-                        default:
-                            checkActionMenuContinue = true;
-                    }
-                }while (checkActionMenuContinue) ;
+            }while (checkActionMenuContinue) ;
 
-            } while (checkActionMenu);
+        } while (checkActionMenu);
+    }
+
+    private void showMenuOrderUser() {
+        boolean checkActionMenu = true;
+        do {
+            System.out.println("Menu quản lý order: ");
+            System.out.println("Nhấn 1. Xem chi tiết order");
+            System.out.println("Nhấn 2. Tạo order");
+            int actionMenu = Integer.parseInt(scanner.nextLine());
+            switch (actionMenu) {
+                case 1:
+                    showOrderDetailView();
+                    break;
+                case 2:
+                    createOrder();
+                    break;
+                default:
+                    System.out.println("Nhập sai rồi bạn ơi! Vui lòng nhập lại");
+            }
+            boolean checkActionMenuContinue = true;
+            do {
+                System.out.println("Bạn có muốn tiếp tục hay không: Y/N");
+                String actionMenuContinue = scanner.nextLine();
+                switch (actionMenuContinue) {
+                    case "Y":
+                        checkActionMenu = true;
+                        checkActionMenuContinue = false;
+                        break;
+                    case "N":
+                        checkActionMenu = false;
+                        checkActionMenuContinue = false;
+                        break;
+                    default:
+                        checkActionMenuContinue = true;
+                }
+            }while (checkActionMenuContinue) ;
+
+        } while (checkActionMenu);
+    }
+
+    private void showReportTotalRevenue() {
+        List<Order> orders = iOrderService.getAll();
+
+        double total = 0;
+        for (int i = 0; i < orders.size(); i++) {
+            total += orders.get(i).getTotal();
         }
+        System.out.println("Tổng doanh thu: " + total);
+    }
 
     private void createOrder() {
         BookView bookView = new BookView();

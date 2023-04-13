@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="704b229c-9f55-43bc-9e26-ed957c6d8a64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../HelloJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloJava/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="704b229c-9f55-43bc-9e26-ed957c6d8a64" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,14 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/CODEGYM/CODEGYM/Module2/C0123K1/casetemplate"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CODEGYM\CODEGYM\Module2\C0123K1\casetemplate\src\main\java\com\codegym\service\inmemory" />
@@ -81,7 +79,11 @@
       <workItem from="1681195528476" duration="42000" />
       <workItem from="1681268296254" duration="333000" />
       <workItem from="1681281928410" duration="7282000" />
-      <workItem from="1681304069980" duration="5802000" />
+      <workItem from="1681304069980" duration="8480000" />
+      <workItem from="1681313044114" duration="13000" />
+      <workItem from="1681350370328" duration="309000" />
+      <workItem from="1681367699463" duration="781000" />
+      <workItem from="1681371114984" duration="7491000" />
     </task>
     <servers />
   </component>
